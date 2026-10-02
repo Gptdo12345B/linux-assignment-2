@@ -25,7 +25,8 @@ unit_test_rc=$?
 if [ $unit_test_rc -ne 0 ]; then
     echo "Unit test failed"
 fi
-
+# copy over the correct assignment-test.sh for assignment 2
+cp -f ./assignment/assignment2/assignment-test-fix.sh ./assignment-autotest/test/assignment2/assignment-test.sh 
 # If there's a configuration for the assignment number, use this to look for
 # additional tests
 if [ -f conf/assignment.txt ]; then
